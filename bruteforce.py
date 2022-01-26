@@ -8,8 +8,6 @@ start_time = time.time()
 
 data = pd.read_csv(sys.argv[1], sep=",")
 data = data[data["price"] >= 0]
-data["price"] = data["price"]
-data["price"] = data["price"].astype(int)
 data = data.to_dict('records')
 
 max_price = 500

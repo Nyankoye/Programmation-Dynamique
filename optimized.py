@@ -5,7 +5,7 @@ import sys
 
 start_time = time.time()
 accuracy = 10
-data = pd.read_csv(sys.argv[1], sep=";")
+data = pd.read_csv(sys.argv[1], sep=",")
 data = data[data["price"] >= 0]
 data["price"] = np.ceil(data["price"] * accuracy)
 data["price"] = data["price"].astype(int)
